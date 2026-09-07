@@ -2,6 +2,7 @@ const GAMES = [
   {
     "name": "달무티",
     "en": "The Great Dalmuti",
+    "image": "dalmuti.jpg",
     "players": [
       4,
       5,
@@ -22,6 +23,7 @@ const GAMES = [
   {
     "name": "라스베가스",
     "en": "Las Vegas",
+    "image": "las-vegas.jpg",
     "players": [
       2,
       3,
@@ -41,6 +43,7 @@ const GAMES = [
   {
     "name": "사보타지",
     "en": "Saboteur",
+    "image": "saboteur.jpg",
     "players": [
       3,
       4,
@@ -62,6 +65,7 @@ const GAMES = [
   {
     "name": "잉카의 황금",
     "en": "Incan Gold",
+    "image": "incan-gold.jpg",
     "players": [
       3,
       4,
@@ -83,6 +87,7 @@ const GAMES = [
   {
     "name": "스플렌더",
     "en": "Splendor",
+    "image": "splendor.jpg",
     "players": [
       2,
       3,
@@ -100,6 +105,7 @@ const GAMES = [
   {
     "name": "서바이브:더 아일랜드",
     "en": "Survive: The Island",
+    "image": "survive-the-island.jpg",
     "players": [
       2,
       3,
@@ -119,6 +125,7 @@ const GAMES = [
   {
     "name": "타코 캣 고트 치즈 피자",
     "en": "Taco Cat Goat Cheese Pizza",
+    "image": "taco-cat-goat-cheese-pizza.jpg",
     "players": [
       3,
       4,
@@ -140,6 +147,7 @@ const GAMES = [
   {
     "name": "익스플로딩 키튼 - 굿앤이블",
     "en": "Exploding Kittens: Good vs Evil",
+    "image": "exploding-kitten.png",
     "players": [
       2,
       3,
@@ -159,6 +167,7 @@ const GAMES = [
   {
     "name": "아발론 레지스탕스",
     "en": "The Resistance: Avalon",
+    "image": "avalon.jpg",
     "players": [
       5,
       6,
@@ -178,6 +187,7 @@ const GAMES = [
   {
     "name": "화이트홀 미스테리",
     "en": "Whitehall Mystery",
+    "image": "whitehall.jpg",
     "players": [
       2,
       3,
@@ -196,6 +206,7 @@ const GAMES = [
   {
     "name": "뱅",
     "en": "BANG!",
+    "image": "bang.jpg",
     "players": [
       4,
       5,
@@ -215,6 +226,7 @@ const GAMES = [
   {
     "name": "한밤의 늑대인간",
     "en": "One Night Ultimate Werewolf",
+    "image": "one-night-werewolves.jpg",
     "players": [
       3,
       4,
@@ -236,6 +248,7 @@ const GAMES = [
   {
     "name": "코요테",
     "en": "Coyote",
+    "image": "coyote.jpg",
     "players": [
       2,
       3,
@@ -258,6 +271,7 @@ const GAMES = [
   {
     "name": "노땡스",
     "en": "No Thanks!",
+    "image": "no-thanks.jpg",
     "players": [
       3,
       4,
@@ -278,6 +292,7 @@ const GAMES = [
   {
     "name": "타임라인 트위스트",
     "en": "Timeline Twist",
+    "image": "timeline-twist.jpg",
     "players": [
       2,
       3,
@@ -298,6 +313,7 @@ const GAMES = [
   {
     "name": "마헤",
     "en": "Mahe",
+    "image": "mahe.jpg",
     "players": [
       2,
       3,
@@ -319,6 +335,7 @@ const GAMES = [
   {
     "name": "루미큐브",
     "en": "Rummikub",
+    "image": "rumicube.jpg",
     "players": [
       2,
       3,
@@ -337,6 +354,7 @@ const GAMES = [
   {
     "name": "시타델",
     "en": "Citadels",
+    "image": "citadel.jpg",
     "players": [
       2,
       3,
@@ -359,6 +377,7 @@ const GAMES = [
   {
     "name": "바퀴벌레 포커",
     "en": "Cockroach Poker",
+    "image": "cockroach-poker.jpg",
     "players": [
       2,
       3,
@@ -379,6 +398,7 @@ const GAMES = [
   {
     "name": "할리갈리 (후르츠 펀치)",
     "en": "Halli Galli",
+    "image": "fruits-punch.png",
     "players": [
       2,
       3,
@@ -399,6 +419,7 @@ const GAMES = [
   {
     "name": "스페이스 크루",
     "en": "The Crew: The Quest for Planet Nine",
+    "image": "space-crew.jpg",
     "players": [
       3,
       4,
@@ -417,6 +438,7 @@ const GAMES = [
   {
     "name": "스컬킹",
     "en": "Skull King",
+    "image": "skull-king.jpg",
     "players": [
       2,
       3,
@@ -439,6 +461,7 @@ const GAMES = [
   {
     "name": "딕싯",
     "en": "Dixit",
+    "image": "dixit.jpg",
     "players": [
       3,
       4,
@@ -460,6 +483,7 @@ const GAMES = [
   {
     "name": "노팅엄의 지방관",
     "en": "Sheriff of Nottingham",
+    "image": "sheriff-of-nottingham.jpg",
     "players": [
       3,
       4,
@@ -478,6 +502,7 @@ const GAMES = [
   {
     "name": "옛날옛적에",
     "en": "Once Upon a Time",
+    "image": "once-upon-a-time.jpg",
     "players": [
       2,
       3,
@@ -498,6 +523,7 @@ const GAMES = [
   {
     "name": "시퀀스",
     "en": "Sequence",
+    "image": "sequence.jpg",
     "players": [
       2,
       3,
@@ -518,6 +544,7 @@ const GAMES = [
   {
     "name": "카르카손",
     "en": "Carcassonne",
+    "image": "carcassone.jpg",
     "players": [
       2,
       3,
@@ -537,6 +564,7 @@ const GAMES = [
   {
     "name": "클루",
     "en": "Clue / Cluedo",
+    "image": "clue.png",
     "players": [
       3,
       4,
