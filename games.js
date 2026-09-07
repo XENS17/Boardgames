@@ -377,7 +377,7 @@ const GAMES = [
     "desc": "카드의 정체를 말로 속이고 의심하는 순수 블러핑 게임."
   },
   {
-    "name": "후르츠 펀치",
+    "name": "할리갈리 (후르츠 펀치)",
     "en": "Halli Galli",
     "players": [
       2,
@@ -397,7 +397,7 @@ const GAMES = [
     "desc": "과일이 다섯 개가 되는 순간 종을 먼저 치는 순발력 게임."
   },
   {
-    "name": "더 크루 (스페이스)",
+    "name": "스페이스 크루",
     "en": "The Crew: The Quest for Planet Nine",
     "players": [
       3,
