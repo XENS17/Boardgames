@@ -224,7 +224,7 @@ const GAMES = [
     "descEn": "One player flees across London while the investigators work together to track them down."
   },
   {
-    "name": "뱅",
+    "name": "뱅!",
     "en": "BANG!",
     "image": "bang.jpg",
     "players": [
