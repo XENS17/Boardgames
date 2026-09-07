@@ -1,4 +1,3 @@
-
 :root{
   --bg:#f7f3eb; --card:#fffdf8; --ink:#20201d; --muted:#76736d;
   --line:#e6dfd3; --accent:#2f5d50; --accent-soft:#e4eee9; --shadow:0 12px 30px rgba(50,45,36,.08);
@@ -8,7 +7,12 @@ body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Sans KR",s
 button,input,select{font:inherit}
 .hero{padding:42px 20px 28px;background:linear-gradient(180deg,#efe6d7 0%,var(--bg) 100%)}
 .hero-inner{max-width:1120px;margin:auto;display:flex;justify-content:space-between;align-items:end;gap:24px}
-.eyebrow{font-size:12px;letter-spacing:.18em;font-weight:800;color:var(--accent);margin:0 0 8px}
+.hero-copy{flex:1;min-width:0}
+.top-row{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:8px}
+.eyebrow{font-size:12px;letter-spacing:.18em;font-weight:800;color:var(--accent);margin:0}
+.language-switch{display:flex;gap:3px;padding:3px;background:rgba(255,255,255,.62);border:1px solid var(--line);border-radius:999px;flex:none}
+.language-switch button{border:0;background:transparent;color:var(--muted);border-radius:999px;padding:6px 10px;font-size:11px;font-weight:700;cursor:pointer;transition:.15s}
+.language-switch button.active{background:var(--ink);color:#fff}
 h1{font-size:clamp(34px,7vw,62px);line-height:1.05;margin:0;letter-spacing:-.04em}
 .subtitle{font-size:16px;color:var(--muted);margin:14px 0 0}
 .count-badge{width:92px;height:92px;border-radius:28px;background:var(--ink);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:var(--shadow);flex:none}
@@ -27,7 +31,7 @@ h1{font-size:clamp(34px,7vw,62px);line-height:1.05;margin:0;letter-spacing:-.04e
 .search-row input,.search-row select{border:1px solid var(--line);background:#fff;border-radius:13px;padding:12px 14px;color:var(--ink)}
 .search-row input{flex:1;min-width:0}
 .result-line{font-size:13px;color:var(--muted);margin:0 0 12px 4px}
-.result-line strong{color:var(--ink)}
+.result-line strong{color:var(--ink);margin-right:2px}
 .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 7px 22px rgba(50,45,36,.045);cursor:pointer;transition:.18s}
 .card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
@@ -46,13 +50,19 @@ h1{font-size:clamp(34px,7vw,62px);line-height:1.05;margin:0;letter-spacing:-.04e
 dialog{width:min(560px,calc(100vw - 30px));border:0;border-radius:24px;padding:0;background:var(--card);box-shadow:0 30px 80px rgba(0,0,0,.25)}
 dialog::backdrop{background:rgba(20,20,18,.45);backdrop-filter:blur(4px)}
 .modal-close{position:absolute;right:14px;top:12px;width:36px;height:36px;border:0;border-radius:50%;background:rgba(255,255,255,.9);font-size:24px;cursor:pointer;z-index:2}
-.modal-cover{aspect-ratio:16/8;background:linear-gradient(135deg,#e7dfd1,#d7e2da);display:flex;align-items:center;justify-content:center;font-size:54px}
+.modal-cover{aspect-ratio:16/8;background:linear-gradient(135deg,#e7dfd1,#d7e2da);display:flex;align-items:center;justify-content:center;font-size:54px;overflow:hidden}
+.modal-cover img{width:100%;height:100%;object-fit:cover}
 .modal-body{padding:24px}.modal-body h2{font-size:27px;margin:0}.modal-body .en{font-size:13px}.modal-body .desc{font-size:15px;margin-top:16px;color:#55514a}.modal-body .meta{font-size:14px}
 footer{text-align:center;color:var(--muted);font-size:12px;padding:30px 20px 44px}
 @media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:680px){
-  .hero{padding-top:30px}.hero-inner{align-items:center}.count-badge{width:72px;height:72px;border-radius:22px}.count-badge strong{font-size:23px}
+  .hero{padding-top:24px}.hero-inner{align-items:center}.count-badge{width:72px;height:72px;border-radius:22px}.count-badge strong{font-size:23px}
+  .top-row{align-items:flex-start}.language-switch button{padding:6px 8px}
   .filters{padding:18px;border-radius:20px}.grid{grid-template-columns:repeat(2,1fr);gap:11px}
   .card-body{padding:13px}.card h3{font-size:15px}.desc{font-size:12px}.search-row{flex-direction:column}
+}
+@media(max-width:440px){
+  .hero-inner{display:block}.count-badge{display:none}
+  .top-row{margin-bottom:12px}.language-switch{margin-left:auto}
 }
 @media(max-width:390px){.grid{grid-template-columns:1fr}}

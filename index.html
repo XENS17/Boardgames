@@ -3,20 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="보유 중인 보드게임을 인원수, 시간, 분위기로 골라보는 개인 보드게임 컬렉션." />
-  <title>오늘 뭐 하지? — KP's Board Game Shelf</title>
+  <meta name="description" content="KP's personal board game shelf. Browse by player count, time, and mood." />
+  <title>KP's Board Game Shelf</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=3" />
 </head>
 <body>
   <header class="hero">
     <div class="hero-inner">
-      <div>
-        <p class="eyebrow">KP's BOARD GAME SHELF</p>
-        <h1>오늘 뭐 하지? 🎲</h1>
-        <p class="subtitle">인원수와 분위기를 골라서 오늘 할 게임을 찾아보세요.</p>
+      <div class="hero-copy">
+        <div class="top-row">
+          <p class="eyebrow">KP's BOARD GAME SHELF</p>
+          <div class="language-switch" role="group" aria-label="Language">
+            <button type="button" data-lang="ko" class="active">한국어</button>
+            <button type="button" data-lang="en">English</button>
+          </div>
+        </div>
+        <h1 id="heroTitle">오늘 뭐 하지? 🎲</h1>
+        <p class="subtitle" id="heroSubtitle">인원수와 분위기를 골라서 오늘 할 게임을 찾아보세요.</p>
       </div>
       <div class="count-badge"><strong id="gameCount">28</strong><span>games</span></div>
     </div>
@@ -26,7 +32,7 @@
     <section class="filters">
       <div class="filter-block">
         <div class="filter-heading">
-          <h2>몇 명인가요?</h2>
+          <h2 id="playersHeading">몇 명인가요?</h2>
           <button class="text-btn" id="clearFilters">전체 초기화</button>
         </div>
         <div class="chips" id="playerFilters">
@@ -38,38 +44,32 @@
       </div>
 
       <div class="filter-block">
-        <h2>얼마나 할까요?</h2>
+        <h2 id="timeHeading">얼마나 할까요?</h2>
         <div class="chips" id="timeFilters">
-          <button data-time="20">⚡ 20분 내외</button>
-          <button data-time="60">☕ 1시간 이내</button>
-          <button data-time="999">🎲 1시간+</button>
+          <button data-time="20" id="time20">⚡ 20분 내외</button>
+          <button data-time="60" id="time60">☕ 1시간 이내</button>
+          <button data-time="999" id="timeLong">🎲 1시간+</button>
         </div>
       </div>
 
       <div class="filter-block">
-        <h2>오늘 분위기는?</h2>
+        <h2 id="moodHeading">오늘 분위기는?</h2>
         <div class="chips" id="tagFilters"></div>
       </div>
 
       <div class="search-row">
         <input id="searchInput" type="search" placeholder="게임 이름 검색…" aria-label="게임 이름 검색" />
-        <select id="sortSelect" aria-label="정렬">
-          <option value="default">추천순</option>
-          <option value="easy">쉬운 게임부터</option>
-          <option value="hard">어려운 게임부터</option>
-          <option value="short">짧은 게임부터</option>
-          <option value="long">긴 게임부터</option>
-        </select>
+        <select id="sortSelect" aria-label="정렬"></select>
       </div>
     </section>
 
     <section>
-      <div class="result-line"><strong id="resultCount">28</strong>개의 게임</div>
+      <div class="result-line"><strong id="resultCount">28</strong><span id="resultSuffix">개의 게임</span></div>
       <div class="grid" id="gameGrid"></div>
       <div class="empty" id="emptyState" hidden>
         <div class="empty-icon">🎲</div>
-        <h3>조건에 맞는 게임이 없어요.</h3>
-        <p>필터를 조금 줄여보세요.</p>
+        <h3 id="emptyTitle">조건에 맞는 게임이 없어요.</h3>
+        <p id="emptyText">필터를 조금 줄여보세요.</p>
       </div>
     </section>
   </main>
@@ -80,10 +80,10 @@
   </dialog>
 
   <footer>
-    <p>다음 보드게임 모임에서 하고 싶은 게임을 골라보세요 ✨</p>
+    <p id="footerText">다음 보드게임 모임에서 하고 싶은 게임을 골라보세요 ✨</p>
   </footer>
 
-  <script src="games.js?v=2"></script>
-  <script src="script.js?v=2"></script>
+  <script src="games.js?v=3"></script>
+  <script src="script.js?v=3"></script>
 </body>
 </html>
