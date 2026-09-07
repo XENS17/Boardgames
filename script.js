@@ -25,9 +25,18 @@ function playerText(players){
 function stars(n){return "★".repeat(n)+"☆".repeat(4-n)}
 
 function coverHTML(g, cls="cover"){
-  const filename = encodeURIComponent(g.en.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,""))+".jpg";
+  const filename = g.image || (
+    encodeURIComponent(
+      g.en.toLowerCase()
+        .replace(/[^a-z0-9]+/g,"-")
+        .replace(/^-|-$/g,"")
+    ) + ".jpg"
+  );
+
   return `<div class="${cls}">
-    <img src="images/${filename}?v=${IMAGE_VERSION}" alt="${g.name}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <img src="images/${filename}?v=${IMAGE_VERSION}"
+         alt="${g.name}"
+         onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
     <span class="placeholder" style="display:none">🎲</span>
     ${cls==="cover"?`<span class="mini">${stars(g.difficulty)}</span>`:""}
   </div>`;
