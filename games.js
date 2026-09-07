@@ -113,7 +113,7 @@ const GAMES = [
     "descEn": "Collect gems and build an increasingly powerful engine for buying valuable cards."
   },
   {
-    "name": "서바이브:더 아일랜드",
+    "name": "서바이브: 더 아일랜드",
     "en": "Survive: The Island",
     "image": "survive-the-island.jpg",
     "players": [
