@@ -117,7 +117,7 @@ const GAMES = [
     "desc": "가라앉는 섬에서 탈출하며 서로의 생존자를 견제하는 게임."
   },
   {
-    "name": "타코 캣 고트 피자",
+    "name": "타코 캣 고트 치즈 피자",
     "en": "Taco Cat Goat Cheese Pizza",
     "players": [
       3,
