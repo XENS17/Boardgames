@@ -66,3 +66,51 @@ footer{text-align:center;color:var(--muted);font-size:12px;padding:30px 20px 44p
   .top-row{margin-bottom:12px}.language-switch{margin-left:auto}
 }
 @media(max-width:390px){.grid{grid-template-columns:1fr}}
+
+
+.game-image{cursor:zoom-in}
+
+.image-modal{
+  width:min(96vw,1400px);
+  max-width:none;
+  max-height:96vh;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  overflow:visible;
+}
+.image-modal::backdrop{
+  background:rgba(10,10,10,.82);
+  backdrop-filter:blur(4px);
+}
+.image-modal img{
+  display:block;
+  max-width:94vw;
+  max-height:90vh;
+  width:auto;
+  height:auto;
+  margin:auto;
+  object-fit:contain;
+  border-radius:12px;
+  box-shadow:0 24px 80px rgba(0,0,0,.45);
+  background:#111;
+}
+.image-modal-close{
+  position:fixed;
+  right:18px;
+  top:18px;
+  z-index:20;
+  width:42px;
+  height:42px;
+  border:0;
+  border-radius:50%;
+  background:rgba(255,255,255,.92);
+  color:#111;
+  font-size:26px;
+  line-height:1;
+  cursor:pointer;
+  box-shadow:0 5px 20px rgba(0,0,0,.28);
+}
+
