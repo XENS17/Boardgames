@@ -1,4 +1,4 @@
-const IMAGE_VERSION = "4";
+const IMAGE_VERSION = "5";
 const state={player:null,time:null,tag:null,search:"",sort:"default"};
 let currentLang = localStorage.getItem("boardgameLang") || "ko";
 
@@ -7,8 +7,6 @@ const resultCount=document.querySelector("#resultCount");
 const empty=document.querySelector("#emptyState");
 const modal=document.querySelector("#gameModal");
 const modalContent=document.querySelector("#modalContent");
-const imageModal=document.querySelector("#imageModal");
-const fullImage=document.querySelector("#fullImage");
 const tagContainer=document.querySelector("#tagFilters");
 
 const TAGS=["파티","가볍게","전략","추리","협력","블러핑","정체숨기기","트릭테이킹","스토리"];
@@ -81,7 +79,7 @@ function tagName(tag){return currentLang==="ko"?tag:(TAG_NAMES_EN[tag]||tag)}
 function coverHTML(g, cls="cover"){
   const filename = g.image || (encodeURIComponent(g.en.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,""))+".jpg");
   return `<div class="${cls}">
-    <img src="images/${filename}?v=${IMAGE_VERSION}" data-full="images/${filename}?v=${IMAGE_VERSION}" alt="${gameTitle(g)}" class="game-image" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+    <img src="images/${filename}?v=${IMAGE_VERSION}" alt="${gameTitle(g)}" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
     <span class="placeholder" style="display:none">🎲</span>
     ${cls==="cover"?`<span class="mini">${stars(g.difficulty)}</span>`:""}
   </div>`;
@@ -181,22 +179,6 @@ function openModal(g){
     </div>`;
   modal.showModal();
 }
-
-function openImageModal(src, alt){
-  fullImage.src=src;
-  fullImage.alt=alt || "";
-  imageModal.showModal();
-}
-
-document.addEventListener("click",e=>{
-  const img=e.target.closest(".game-image");
-  if(!img)return;
-  e.stopPropagation();
-  openImageModal(img.dataset.full,img.alt);
-});
-
-document.querySelector(".image-modal-close").onclick=()=>imageModal.close();
-imageModal.addEventListener("click",e=>{if(e.target===imageModal)imageModal.close()});
 
 document.querySelector(".modal-close").onclick=()=>modal.close();
 modal.addEventListener("click",e=>{if(e.target===modal)modal.close()});
