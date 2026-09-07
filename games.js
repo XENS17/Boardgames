@@ -98,7 +98,7 @@ const GAMES = [
     "desc": "보석을 모아 더 강한 구매 엔진을 만드는 입문 전략게임."
   },
   {
-    "name": "서바이벌",
+    "name": "서바이브:더 아일랜드",
     "en": "Survive: The Island",
     "players": [
       2,
