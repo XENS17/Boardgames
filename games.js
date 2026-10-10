@@ -636,5 +636,18 @@ const GAMES = [
     ],
     "desc": "용의자, 장소, 흉기를 하나씩 지워가며 사건의 정답을 추리하는 게임.",
     "descEn": "Eliminate suspects, rooms, and weapons until you can solve the classic murder mystery."
+  },
+  {
+  "name": "쿠",
+  "en": "Coup",
+  "image": "coup.jpg",
+  "players": [2, 3, 4, 5, 6],
+  "time": "15분",
+  "timeEn": "15 min",
+  "minutes": 15,
+  "difficulty": 1,
+  "tags": ["블러핑", "카드", "심리전"],
+  "desc": "정체를 속이고 상대의 거짓말을 간파하며 마지막까지 살아남는 카드게임.",
+  "descEn": "A fast card game of bluffing, calling bluffs, and surviving to the end."
   }
 ];
