@@ -24,7 +24,7 @@
         <h1 id="heroTitle">오늘 뭐 하지? 🎲</h1>
         <p class="subtitle" id="heroSubtitle">인원수와 분위기를 골라서 오늘 할 게임을 찾아보세요.</p>
       </div>
-      <div class="count-badge"><strong id="gameCount">28</strong><span>games</span></div>
+      <div class="count-badge"><strong id="gameCount">…</strong><span>games</span></div>
     </div>
   </header>
 
@@ -64,7 +64,7 @@
     </section>
 
     <section>
-      <div class="result-line"><strong id="resultCount">28</strong><span id="resultSuffix">개의 게임</span></div>
+      <div class="result-line"><strong id="resultCount">…</strong><span id="resultSuffix">개의 게임</span></div>
       <div class="grid" id="gameGrid"></div>
       <div class="empty" id="emptyState" hidden>
         <div class="empty-icon">🎲</div>
@@ -83,7 +83,10 @@
     <p id="footerText">다음 보드게임 모임에서 하고 싶은 게임을 골라보세요 ✨</p>
   </footer>
 
-  <script src="games.js?v=5"></script>
-  <script src="script.js?v=5"></script>
+  <script src="games.js?v=6"></script>
+  <script src="script.js?v=6"></script>
+  <script>
+    document.querySelector("#gameCount").textContent = GAMES.length;
+  </script>
 </body>
 </html>
